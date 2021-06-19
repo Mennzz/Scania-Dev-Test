@@ -1,0 +1,12 @@
+.intro{
+    height: 17rem;
+    width: 100%;
+    background-color: #FFFFFF;
+    color:#041E42 ;
+}
+.intro-title{
+    font-size: 6rem;
+    line-height: 6rem;
+    padding-top: 5.5rem;
+    padding-left: 8.75rem;
+}
