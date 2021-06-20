@@ -1,30 +1,106 @@
-
-select {
-    border:none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    -ms-appearance: none; /* get rid of default appearance for IE8, 9 and 10*/
+button{
+    all: unset;
 }
 
-select:focus{
-    outline: none;
-}
-
-.dropdown{
+.dropdown-container{
     border-radius: 1rem;
+    overflow: hidden;
+    border: 1px solid #E2E2E4 ;
+    width: 52rem;
+    margin-top: 10rem;
+    margin-left: 10rem;
+}
+
+/* dropdown hover effect */
+.dropdown-container:hover{
+    border: 1px solid #A4A6AB;
+}
+
+.dropdown-item{
     height: 14rem;
     width: 52rem;
     background-color: #ffffff;
-    border: 1px solid #E2E2E4 ;
     box-sizing: border-box;
     font-weight: 400;
     font-size: 3.5rem;
     line-height: 4rem;
     color: #171719;
-    margin-top: 10rem;
-    margin-left: 10rem;
     padding-left: 4rem;
 }
+
+.dropdown-arrow{  
+    background-image: url("./Down.svg");
+    background-repeat: no-repeat;
+    background-position-x: 45rem;
+    background-position-y: 6.5rem;
+}
+
+.dropdown-option{
+    width: 52rem;
+    display: none;
+}
+
+.dropdown-option ul {
+    list-style: none;
+    padding:0;
+    margin: 0;
+  }
+li.dropdown-item {
+    padding-top: 5rem;
+}
+
+/* show dropdown options */
+.active .dropdown-arrow{
+    background-image: url("./Up.svg");
+}
+
+.active.dropdown-container{
+    box-shadow: 0px 2px 3px 0px #0000001A;
+}
+
+.active .dropdown-option{
+    display: block;
+    transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+}
+
+.active .dropdown-item{
+    border-bottom: 1px solid #E2E2E4;
+}
+
+/* option hover effect */
+li.dropdown-item:hover {
+    background-color:#F6F6F9 ;
+    cursor: pointer;
+}
+
+/* option selected effect */
+.selected {
+    background-color: #C1C6D8 !important;;
+}
+
+.flex-conatiner{
+    display: flex;
+}
+
+.reset{
+    font-size: 4rem;
+    line-height: 6rem;
+    letter-spacing: -0.02em;
+    text-decoration-line: underline;
+    color: #2058A8;
+    font-weight: normal;
+    margin-left: 6rem;
+    margin-top: 14rem;
+}
+
+.reset:hover{
+    cursor: pointer;
+}
+
+
+
+
+
+
 
 

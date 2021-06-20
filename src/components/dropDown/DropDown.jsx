@@ -1,39 +1,37 @@
-import React,{ useState} from "react";
+import React,{useRef} from "react";
 import "./dropDown.css"
+import { useDetectOutsideClick } from '../useDetectOutsideClick';
 
-function DropDown(props){
-    const options =[
-        {value:'smallerThan200', label:'<= 200.000km'},
-        {value:'biggerThan200', label:'> 200.000km'},
-    ]
-
-    const [selectedDistance,setSelectedDistance] = useState([]);
-
-    function handleSelectChange(event) {
-        setSelectedDistance(event.target.value);
-    }
-
-    var selectOption = option(options);
+function DropDown(props) {
+    const dropdownRef = useRef(null);
+    const [isActive, setIsActive] = useDetectOutsideClick(dropdownRef, false);
+    const onClick = () => setIsActive(!isActive);
 
     return (
-        <select onChange={handleSelectChange} className="dropdown">
-            {selectOption}
-        </select>
+        <div className="flex-conatiner">
+        <div className={`dropdown-container ${isActive ? 'active' : 'inactive'}`}>
+        <button onClick={onClick} className="dropdown-title dropdown-item dropdown-arrow">
+        <span>{props.selected.label}</span>
+        </button>
+        <div ref={dropdownRef} className="dropdown-option">
+        <ul>
+          {props.options.filter(option => option.value !== "title").map(option => (
+              <li 
+              className={`dropdown-item ${props.selected.value === option.value ? 'selected' : 'notSelected'}`} 
+              key={option.value}
+              onClick={() => props.onSelectedChange(option)}
+              >
+              {option.label}
+              </li>
+          ))}
+        </ul>
+        </div>
+        </div>
+        <div className="reset" onClick={() => props.onSelectedChange(props.options[0])}>Reset</div>
+        </div>
     )
 
 }
 
-function option(options){
-    var selectOptions = [];
-
-    for(let i = 0; i < options.length;i++ )
-    {
-        selectOptions.push(
-            <option key={i} value={options[i].value}>{options[i].label}</option>
-        )
-    }
-
-    return selectOptions;
-}
 
 export default DropDown;
