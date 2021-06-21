@@ -40,7 +40,6 @@ function Table(props){
   const getRowsData = () =>{   
     var items = props.data;
     var keys = getKeys();
-    console.log(items);
 
     if(props.option.value !== "title")
     {

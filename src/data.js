@@ -38,7 +38,7 @@ const tableData=[
   {
     id: 4,
     Driver:"Niklas Rosén",
-    Company:"Aris FC",
+    Company:"DD Interactive",
     Distance:  200000 ,
     Score: 78
   }     

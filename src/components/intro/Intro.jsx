@@ -4,7 +4,7 @@ import "./intro.css"
 function Intro(props){
     return(
         <div className="intro">
-            <div className="intro-title">Driver evaluation</div>
+            <div className="intro-title">{props.introTitle}</div>
         </div>
     )
 }

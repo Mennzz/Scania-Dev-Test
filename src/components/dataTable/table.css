@@ -1,8 +1,6 @@
 table{
     border-spacing: 0;
     text-align: left;
-    font-size: 3.5rem;
-    line-height: 4rem;
 }
 
 .table-container{
@@ -14,16 +12,27 @@ table{
     width: 44rem;
     height: 4rem;
     padding: 4rem;
+}
+
+th.table-box{
+    border-bottom: 1px solid #C1C6D8;
+}
+
+td.table-box{
     border-bottom: 1px solid #E2E2E4;
 }
 
 .table-header{
     background-color: #E0E2EB;
+    font-weight: 700;
+}
+
+th:last-child{
+    border-radius: 0px 4px 0px 0px;
 }
 
 .table-row{
     background-color:#FFFFFF;
-    font-weight: 400;
 }
 
 /* table row hover effect */

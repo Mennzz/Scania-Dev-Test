@@ -12,8 +12,8 @@ const [selected, setSelected] = useState(options[0]);
 
   return (
     <div>
-      <Header />
-      <Intro />
+      <Header headerTitle={"Fleet Portal"} />
+      <Intro introTitle={"Driver evaluation"} />
       <DropDown 
       options={options} 
       selected={selected}
