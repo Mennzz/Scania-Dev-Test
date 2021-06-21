@@ -1,0 +1,33 @@
+table{
+    border-spacing: 0;
+    text-align: left;
+    font-size: 3.5rem;
+    line-height: 4rem;
+}
+
+.table-container{
+    margin-top: 10rem;
+    margin-left: 10rem;
+}
+
+.table-box{
+    width: 44rem;
+    height: 4rem;
+    padding: 4rem;
+    border-bottom: 1px solid #E2E2E4;
+}
+
+.table-header{
+    background-color: #E0E2EB;
+}
+
+.table-row{
+    background-color:#FFFFFF;
+    font-weight: 400;
+}
+
+/* table row hover effect */
+.table-row:hover{
+    cursor: pointer;
+    background-color: #C1C6D8;
+}
