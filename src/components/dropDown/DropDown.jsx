@@ -1,5 +1,5 @@
-import React,{useRef} from "react";
-import "./dropDown.css"
+import React,{useRef} from 'react';
+import './dropDown.css';
 import { useDetectOutsideClick } from '../useDetectOutsideClick';
 
 function DropDown(props) {
@@ -8,7 +8,7 @@ function DropDown(props) {
 
     //useDetectOutsideClick: set the dropdown inactive when user click outside of it
     const [isActive, setIsActive] = useDetectOutsideClick(dropdownRef, false);
-    
+
     const onClick = () => setIsActive(!isActive);
 
     return (

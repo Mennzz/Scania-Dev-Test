@@ -1,6 +1,6 @@
-import React from "react";
-import "./table.css"
-import {distanceFormat} from "./dataProcessing"
+import React from 'react';
+import './table.css'
+import {distanceFormat} from './dataProcessing'
 
 // enable dynamically create table from any one level dataset
 
