@@ -27,6 +27,7 @@ td.table-box{
     font-weight: 700;
 }
 
+/* style the top-right corner of the table */
 th:last-child{
     border-radius: 0px 4px 0px 0px;
 }

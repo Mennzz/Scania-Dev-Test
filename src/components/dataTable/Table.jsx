@@ -6,12 +6,15 @@ import {distanceFormat} from "./dataProcessing"
 
 function Table(props){
 
+  //ignore the possible id attribute in the table data
   var ignore_headers= ['id'];
 
+  // return the list of headings that should be displayed on top of the table
   const getKeys = () =>{
     return Object.keys(props.data[0]);
   }
 
+  //return the header (component) part of the table
   const getHeader = () => {
     var keys = getKeys();
     return keys.map((key, index)=>
@@ -19,6 +22,8 @@ function Table(props){
       )
   }
 
+  //return the columns of the selected rows
+  //distanceFormat is to format the distance data, distance is number in the source for easy selection
   const RenderRow = (props) =>{
     return props.keys.map((key, index)=>{
       var selectedData=props.data;
@@ -37,21 +42,22 @@ function Table(props){
     )
   }
 
+  //return the selected rows basing on the selector and the divisor value
   const getRowsData = () =>{   
     var items = props.data;
     var keys = getKeys();
 
     if(props.option.value !== "title")
     {
-      if(props.option.value <= props.distanceOption)
+      if(props.option.value <= props.optionDivisor)
       {
         items=items.filter(data =>
-        {return data.Distance <= props.distanceOption;}
+        {return data[props.selector] <= props.optionDivisor;}
       )
         }
         else{
           items=items.filter(data =>
-            {return data.Distance > props.distanceOption;}
+            {return data[props.selector] > props.optionDivisor;}
           )
         }
     }

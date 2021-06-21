@@ -87,11 +87,10 @@ li.dropdown-item:hover {
     letter-spacing: -0.02em;
     text-decoration-line: underline;
     color: #2058A8;
-    font-weight: normal;
     margin-left: 68rem;
     margin-top: 14rem;
 }
-
+/* reset button hover effect */
 .reset:hover{
     cursor: pointer;
 }

@@ -3,7 +3,7 @@ import Header from './components/header/Header';
 import Intro from './components/intro/Intro';
 import DropDown from './components/dropDown/DropDown'
 import Table from './components/dataTable/Table'
-
+// select option data and table data
 import {options, tableData} from './data'
 
 function App() {
@@ -22,7 +22,11 @@ const [selected, setSelected] = useState(options[0]);
       <Table 
       data={tableData}
       option={selected} 
-      distanceOption={options[1].value}
+      //specify the divisor of select value
+      optionDivisor={200000}
+      //specify the select category
+      selector={"Distance"}
+
       />
     </div>
   );
