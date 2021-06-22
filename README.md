@@ -2,6 +2,14 @@
 
 Implementation of a Scania prototype using React.
 
+# Install
+
+### `git clone {https://github.com/Mennzz/Scania-Dev-Test}`
+
+cd into the new folder and type
+
+### `npm install`
+
 # Run
 
 In the project directory, you can run:
