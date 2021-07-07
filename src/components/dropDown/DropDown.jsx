@@ -18,7 +18,7 @@ function DropDown(props) {
         <span>{props.selected.label}</span>
         </button>
         <div ref={dropdownRef} className="dropdown-option">
-        <ul>
+        <ul onClick={onClick}>
           {props.options.filter(option => option.value !== "title").map(option => (
               <li 
               //apply selected class to the selected option

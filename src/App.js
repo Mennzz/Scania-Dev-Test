@@ -18,7 +18,6 @@ const [selected, setSelected] = useState(options[0]);
       options={options} 
       selected={selected}
       onSelectedChange={setSelected}
-      data-testid="dropdown"
       />
       <Table 
       data={tableData}
@@ -27,7 +26,6 @@ const [selected, setSelected] = useState(options[0]);
       optionDivisor={200000}
       //specify the select category
       selector={"Distance"}
-      data-testid="table"
       />
     </div>
   );
